@@ -6,7 +6,7 @@ namespace Dsw2026Ej8;
 
 partial class ProductHelper
 {
-    public static string FormatearPrecio(decimal price)
+    public string FormatearPrecio(decimal price)
     {
         return price.ToString("C");
     }

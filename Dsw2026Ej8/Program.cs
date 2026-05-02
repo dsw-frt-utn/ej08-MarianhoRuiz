@@ -4,9 +4,6 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        // Prueba de la clase ProductHelper a ver si funciona
-
-        var productHelper = ProductHelper.ObtenerEtiquetaProducto(123,"pruebas",1250M);
-        Console.WriteLine(productHelper);
+        Console.WriteLine(Problema2.CrearResumenVenta(123, "Producto A", 5, 10.5m));
     }
 }
