@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 namespace Dsw2026Ej8;
@@ -29,7 +30,8 @@ static internal class Problema2
 {
     static public string CrearResumenVenta(long productCode, string productDescription, int quantity, decimal unitPrice)
     {
-        var resumenVenta = new { code = productCode, description = productDescription, Quantity = quantity, total = quantity*unitPrice };
+
+        var resumenVenta = new { code = productCode, description = productDescription, Quantity = quantity, total = quantity <= 0 ? 0 : quantity * unitPrice };
 
         return $"{resumenVenta.code},descripcion:{resumenVenta.description},cantidad:{resumenVenta.Quantity},total:{resumenVenta.total}";
     }
@@ -42,8 +44,7 @@ static internal class Problema2
 
 
 
-
-
+    
 
 
 
