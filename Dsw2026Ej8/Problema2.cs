@@ -33,7 +33,7 @@ static internal class Problema2
 
         var resumenVenta = new { code = productCode, description = productDescription, Quantity = quantity, total = quantity <= 0 ? 0 : quantity * unitPrice };
 
-        return $"{resumenVenta.code},descripcion:{resumenVenta.description},cantidad:{resumenVenta.Quantity},total:{resumenVenta.total}";
+        return $"{resumenVenta.code}-{resumenVenta.description}-{resumenVenta.total}";
     }
 
 
