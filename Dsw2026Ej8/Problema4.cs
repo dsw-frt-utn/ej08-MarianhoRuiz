@@ -8,6 +8,25 @@ static internal class Problema4
 {
     static public double CalcularPromedio(int? nota1,int? nota2,int? nota3)
     {
-        return (double) (( (nota1 >= 0.0) && (nota1 <= 10.0) ? nota1 : 0.0) + (nota2 >= 0.0 && nota2 <= 10.0 ? nota2 : 0.0) + (nota3 >= 0.0 && nota3 <= 10.0 ? nota3 : 0.0)) / 3.0;
+        int?[] notas = { nota1, nota2, nota3 };
+        int totalNotas = 0;
+        int cantNotasValidas = 0;
+
+        foreach (int? n in notas)
+        {
+            if (n.HasValue && n.Value >= 0 && n.Value <= 10)
+            {
+                totalNotas += n.Value;
+                cantNotasValidas++;
+            }
+        }
+
+        if (cantNotasValidas == 0)
+        {
+            return 0;
+        }
+
+        return (double)totalNotas / cantNotasValidas;
     }
+
 }
