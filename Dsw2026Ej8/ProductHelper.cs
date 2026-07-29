@@ -8,8 +8,6 @@ partial class ProductHelper
 {
     public string ObtenerEtiquetaProducto(long code,string description, decimal price)
     {
-        var aux = FormatearPrecio(price);   
-
-        return $"Codigo:{code}, description:{description}, Precio:{aux}";
+        return $"[{code}] {description} - {FormatearPrecio(price)}";
     }
 }
