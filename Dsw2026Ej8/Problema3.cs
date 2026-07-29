@@ -32,6 +32,6 @@ public class Problema3
         copia += 1;
         var copia2 = product;
         copia2.SetDescription("Nuevo producto");
-        return $"ValorOriginal:{originalValue}-ValorCopia:{copia}-descripcionProducto:{copia2.GetDescription()}";
+        return $"{originalValue}-{copia}-{product.GetDescription()}";
     }
 }
