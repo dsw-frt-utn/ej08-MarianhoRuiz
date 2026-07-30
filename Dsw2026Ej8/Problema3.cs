@@ -9,7 +9,7 @@ namespace Dsw2026Ej8;
 
 public class Problema3
 {
-    internal class Product
+    public class Product
     {
         long code;
         string description;
@@ -26,7 +26,7 @@ public class Problema3
         public string GetDescription() =>  this.description;
     }
 
-    internal string CompararCopias(int originalValue,Product product)
+    public string CompararCopias(int originalValue,Product product)
     {
         var copia = originalValue;
         copia += 1;
