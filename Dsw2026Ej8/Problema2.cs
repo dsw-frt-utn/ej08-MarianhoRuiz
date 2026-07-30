@@ -31,9 +31,9 @@ static internal class Problema2
     static public string CrearResumenVenta(long productCode, string productDescription, int quantity, decimal unitPrice)
     {
 
-        var resumenVenta = new { code = productCode, description = productDescription, Quantity = quantity, total = quantity <= 0 ? 0 : quantity * unitPrice };
+        var resumenVenta = new { Code = productCode, Description = productDescription, Quantity = quantity, Total = quantity <= 0 ? 0 : quantity * unitPrice };
 
-        return $"{resumenVenta.code}-{resumenVenta.description}-{resumenVenta.total}";
+        return $"{resumenVenta.Code}-{resumenVenta.Description}-{resumenVenta.Total}";
     }
 
 
